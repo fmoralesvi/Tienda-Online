@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verduras</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="verduras.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -20,6 +21,7 @@
         </nav>
     </header>
     <section class="seccion">
+        <!-- Verduras de Hoja -->
         <div class="subseccion">
             <h3>Verduras de Hoja</h3>
             <div class="productos">
@@ -27,7 +29,7 @@
                     <img src="lechuga.jpg" alt="Lechuga">
                     <h3>Lechuga</h3>
                     <p>Fresca y crujiente, ideal para ensaladas.</p>
-                    <p>Precio: $2.500/kg</p>
+                    <p class="precio" data-precio="2000">Precio: $2.000/kg</p>
                     <label for="unidad-lechuga">Seleccionar unidad:</label>
                     <select id="unidad-lechuga" class="unidad">
                         <option value="kg">Kilogramos</option>
@@ -35,12 +37,14 @@
                     </select>
                     <label for="cantidad-lechuga">Cantidad:</label>
                     <input type="number" id="cantidad-lechuga" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Lechuga', 2000)">Agregar al carrito</button>
                 </div>
+                
                 <div class="producto">
                     <img src="espinaca.jpg" alt="Espinaca">
                     <h3>Espinaca</h3>
                     <p>Rica en hierro y vitaminas.</p>
-                    <p>Precio: $3.000/kg</p>
+                    <p class="precio" data-precio="2500">Precio: $2.500/kg</p>
                     <label for="unidad-espinaca">Seleccionar unidad:</label>
                     <select id="unidad-espinaca" class="unidad">
                         <option value="kg">Kilogramos</option>
@@ -48,12 +52,14 @@
                     </select>
                     <label for="cantidad-espinaca">Cantidad:</label>
                     <input type="number" id="cantidad-espinaca" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Espinaca', 2500)">Agregar al carrito</button>
                 </div>
+                
                 <div class="producto">
                     <img src="acelga.jpg" alt="Acelga">
                     <h3>Acelga</h3>
-                    <p>Ideal para sopas y ensaladas.</p>
-                    <p>Precio: $2.800/kg</p>
+                    <p>Perfecta para sopas y salteados.</p>
+                    <p class="precio" data-precio="2800">Precio: $2.800/kg</p>
                     <label for="unidad-acelga">Seleccionar unidad:</label>
                     <select id="unidad-acelga" class="unidad">
                         <option value="kg">Kilogramos</option>
@@ -61,17 +67,20 @@
                     </select>
                     <label for="cantidad-acelga">Cantidad:</label>
                     <input type="number" id="cantidad-acelga" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Acelga', 2800)">Agregar al carrito</button>
                 </div>
             </div>
         </div>
+        
+        <!-- Verduras de Raíz -->
         <div class="subseccion">
             <h3>Verduras de Raíz</h3>
             <div class="productos">
                 <div class="producto">
                     <img src="zanahoria.jpg" alt="Zanahoria">
                     <h3>Zanahoria</h3>
-                    <p>Rica en betacarotenos, ideal para jugos y ensaladas.</p>
-                    <p>Precio: $2.200/kg</p>
+                    <p>Dulce y nutritiva, excelente para jugos.</p>
+                    <p class="precio" data-precio="2200">Precio: $2.200/kg</p>
                     <label for="unidad-zanahoria">Seleccionar unidad:</label>
                     <select id="unidad-zanahoria" class="unidad">
                         <option value="kg">Kilogramos</option>
@@ -79,12 +88,14 @@
                     </select>
                     <label for="cantidad-zanahoria">Cantidad:</label>
                     <input type="number" id="cantidad-zanahoria" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Zanahoria', 2200)">Agregar al carrito</button>
                 </div>
+                
                 <div class="producto">
                     <img src="papa.jpg" alt="Papa">
                     <h3>Papa</h3>
-                    <p>Base de muchas recetas tradicionales.</p>
-                    <p>Precio: $1.800/kg</p>
+                    <p>Versátil para diferentes preparaciones.</p>
+                    <p class="precio" data-precio="1800">Precio: $1.800/kg</p>
                     <label for="unidad-papa">Seleccionar unidad:</label>
                     <select id="unidad-papa" class="unidad">
                         <option value="kg">Kilogramos</option>
@@ -92,12 +103,14 @@
                     </select>
                     <label for="cantidad-papa">Cantidad:</label>
                     <input type="number" id="cantidad-papa" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Papa', 1800)">Agregar al carrito</button>
                 </div>
+                
                 <div class="producto">
                     <img src="remolacha.jpg" alt="Remolacha">
                     <h3>Remolacha</h3>
-                    <p>Dulce y saludable, ideal para ensaladas y jugos.</p>
-                    <p>Precio: $2.500/kg</p>
+                    <p>Rica en antioxidantes, ideal para ensaladas.</p>
+                    <p class="precio" data-precio="2600">Precio: $2.600/kg</p>
                     <label for="unidad-remolacha">Seleccionar unidad:</label>
                     <select id="unidad-remolacha" class="unidad">
                         <option value="kg">Kilogramos</option>
@@ -105,6 +118,7 @@
                     </select>
                     <label for="cantidad-remolacha">Cantidad:</label>
                     <input type="number" id="cantidad-remolacha" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Remolacha', 2600)">Agregar al carrito</button>
                 </div>
             </div>
         </div>

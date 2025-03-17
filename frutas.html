@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frutas</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="frutas.css">
+
+
 </head>
 <body>
     <header>
@@ -20,82 +22,114 @@
         </nav>
     </header>
     <section class="seccion">
+        <!-- Frutas Tropicales -->
         <div class="subseccion">
             <h3>Frutas Tropicales</h3>
             <div class="productos">
+
                 <div class="producto">
                     <img src="mango.jpg" alt="Mango">
                     <h3>Mango</h3>
                     <p>Dulce y jugoso, ideal para jugos y postres.</p>
-                    <p>Precio: $5.000/kg</p>
+                    <p class="precio" data-precio="5000">Precio: $5.000/kg</p>
                     <label for="unidad-mango">Seleccionar unidad:</label>
                     <select id="unidad-mango" class="unidad">
                         <option value="kg">Kilogramos</option>
                         <option value="lb">Libras</option>
                     </select>
+                    <label for="cantidad-mango">Cantidad:</label>
+                    <input type="number" id="cantidad-mango" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Mango', 5000, 'unidad-mango', 'cantidad-mango')">
+                        Agregar al carrito
+                    </button>
                 </div>
+
                 <div class="producto">
                     <img src="piña.jpg" alt="Piña">
                     <h3>Piña</h3>
                     <p>Refrescante y dulce, ideal para jugos.</p>
-                    <p>Precio: $4.500/kg</p>
+                    <p class="precio" data-precio="4500">Precio: $4.500/kg</p>
                     <label for="unidad-piña">Seleccionar unidad:</label>
                     <select id="unidad-piña" class="unidad">
                         <option value="kg">Kilogramos</option>
                         <option value="lb">Libras</option>
                     </select>
+                    <label for="cantidad-piña">Cantidad:</label>
+                    <input type="number" id="cantidad-piña" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Piña', 4500, 'unidad-piña', 'cantidad-piña')">Agregar al carrito</button>
                 </div>
+
                 <div class="producto">
                     <img src="papaya.jpg" alt="Papaya">
                     <h3>Papaya</h3>
                     <p>Rica en fibra y vitaminas.</p>
-                    <p>Precio: $3.800/kg</p>
+                    <p class="precio" data-precio="3800">Precio: $3.800/kg</p>
                     <label for="unidad-papaya">Seleccionar unidad:</label>
                     <select id="unidad-papaya" class="unidad">
                         <option value="kg">Kilogramos</option>
                         <option value="lb">Libras</option>
                     </select>
+                    <label for="cantidad-papaya">Cantidad:</label>
+                    <input type="number" id="cantidad-papaya" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Papaya', 3800, 'unidad-papaya', 'cantidad-papaya')">Agregar al carrito</button>
                 </div>
+
             </div>
         </div>
+
+        <!-- Frutas de Clima Frío -->
         <div class="subseccion">
             <h3>Frutas de Clima Frío</h3>
             <div class="productos">
+
                 <div class="producto">
                     <img src="manzana.jpg" alt="Manzana">
                     <h3>Manzana</h3>
                     <p>Crujiente y dulce, perfecta para snacks saludables.</p>
-                    <p>Precio: $4.000/kg</p>
+                    <p class="precio" data-precio="4000">Precio: $4.000/kg</p>
                     <label for="unidad-manzana">Seleccionar unidad:</label>
                     <select id="unidad-manzana" class="unidad">
                         <option value="kg">Kilogramos</option>
                         <option value="lb">Libras</option>
                     </select>
+                    <label for="cantidad-manzana">Cantidad:</label>
+                    <input type="number" id="cantidad-manzana" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Manzana', 4000, 'unidad-manzana', 'cantidad-manzana')">Agregar al carrito</button>
                 </div>
+
                 <div class="producto">
                     <img src="pera.jpg" alt="Pera">
                     <h3>Pera</h3>
                     <p>Dulce y jugosa, ideal para postres.</p>
-                    <p>Precio: $3.700/kg</p>
+                    <p class="precio" data-precio="3700">Precio: $3.700/kg</p>
                     <label for="unidad-pera">Seleccionar unidad:</label>
                     <select id="unidad-pera" class="unidad">
                         <option value="kg">Kilogramos</option>
                         <option value="lb">Libras</option>
                     </select>
+                    <label for="cantidad-pera">Cantidad:</label>
+                    <input type="number" id="cantidad-pera" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Pera', 3700, 'unidad-pera', 'cantidad-pera')">Agregar al carrito</button>
                 </div>
+
                 <div class="producto">
                     <img src="uva.jpg" alt="Uva">
                     <h3>Uvas</h3>
                     <p>Pequeñas y dulces, ideales como snack.</p>
-                    <p>Precio: $6.000/kg</p>
+                    <p class="precio" data-precio="6000">Precio: $6.000/kg</p>
                     <label for="unidad-uva">Seleccionar unidad:</label>
                     <select id="unidad-uva" class="unidad">
                         <option value="kg">Kilogramos</option>
                         <option value="lb">Libras</option>
                     </select>
+                    <label for="cantidad-uva">Cantidad:</label>
+                    <input type="number" id="cantidad-uva" class="cantidad" min="1" value="1">
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Uva', 6000, 'unidad-uva', 'cantidad-uva')">Agregar al carrito</button>
                 </div>
+
             </div>
         </div>
     </section>
 </body>
+<script src="script.js"></script>
 </html>
