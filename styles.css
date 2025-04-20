@@ -14,6 +14,12 @@ header {
     text-align: center;
 }
 
+header h1 {
+    font-size: 48px; /* Aumentado el tamaño del título principal */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -27,10 +33,21 @@ nav ul li {
 }
 
 nav ul li a {
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-size: 18px;
-    transition: color 0.3s ease;
+    background-color: #388E3C; /* verde oscuro para los botones */
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: #2e7d32;
+    transform: translateY(-2px); /* un pequeño efecto al pasar el cursor */
 }
 
 nav ul li a:hover {
@@ -39,7 +56,10 @@ nav ul li a:hover {
 
 /* SECCIÓN HERO */
 .hero {
-    background: url('img/hero.jpg') center/cover no-repeat;
+    background-image: url('img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 400px;
     display: flex;
     align-items: center;
@@ -54,8 +74,18 @@ nav ul li a:hover {
     max-width: 600px;
 }
 
+.hero-content > * {
+    margin-bottom: 10px; /* Separación entre elementos */
+}
+
 .hero h2 {
-    font-size: 32px;
+    font-size: 24px; /* Tamaño ajustado del subtítulo */
+}
+
+.subtitulo-hero {
+    font-size: 20px; /* Tamaño personalizado para subtítulo */
+    font-weight: normal;
+    margin-bottom: 10px;
 }
 
 .hero p {
@@ -120,7 +150,52 @@ nav ul li a:hover {
     color: #666;
 }
 
-/* FOOTER */
+/* SECCIÓN PASARELA DE PAGO */
+.pasarela {
+    padding: 40px 20px; /* Añadir padding para separar del borde */
+    max-width: 800px; /* Limitar el ancho del formulario */
+    margin: 0 auto; /* Centrar el contenido */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pasarela h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.pasarela form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Separación entre los campos del formulario */
+}
+
+.pasarela input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pasarela button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.pasarela button:hover {
+    background-color: #388E3C;
+}
+
 footer {
     text-align: center;
     background-color: #4CAF50;
