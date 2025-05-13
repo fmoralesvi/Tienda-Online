@@ -6,6 +6,11 @@ body {
     color: #333;
 }
 
+/* Estilos generales para todos los enlaces */
+a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
 /* HEADER */
 header {
     background-color: #4CAF50;
@@ -15,7 +20,7 @@ header {
 }
 
 header h1 {
-    font-size: 48px; /* Aumentado el tamaño del título principal */
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -37,7 +42,7 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    background-color: #388E3C; /* verde oscuro para los botones */
+    background-color: #388E3C;
     padding: 10px 20px;
     border-radius: 8px;
     margin: 0 10px;
@@ -47,10 +52,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #2e7d32;
-    transform: translateY(-2px); /* un pequeño efecto al pasar el cursor */
-}
-
-nav ul li a:hover {
+    transform: translateY(-2px);
     color: #d4ffb1;
 }
 
@@ -75,15 +77,15 @@ nav ul li a:hover {
 }
 
 .hero-content > * {
-    margin-bottom: 10px; /* Separación entre elementos */
+    margin-bottom: 10px;
 }
 
 .hero h2 {
-    font-size: 24px; /* Tamaño ajustado del subtítulo */
+    font-size: 24px;
 }
 
 .subtitulo-hero {
-    font-size: 20px; /* Tamaño personalizado para subtítulo */
+    font-size: 20px;
     font-weight: normal;
     margin-bottom: 10px;
 }
@@ -101,11 +103,12 @@ nav ul li a:hover {
     font-size: 18px;
     border-radius: 5px;
     margin: 10px;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
     background-color: #e68900;
+    transform: scale(1.05);
 }
 
 /* SECCIÓN DESTACADOS */
@@ -152,9 +155,9 @@ nav ul li a:hover {
 
 /* SECCIÓN PASARELA DE PAGO */
 .pasarela {
-    padding: 40px 20px; /* Añadir padding para separar del borde */
-    max-width: 800px; /* Limitar el ancho del formulario */
-    margin: 0 auto; /* Centrar el contenido */
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -169,7 +172,7 @@ nav ul li a:hover {
 .pasarela form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Separación entre los campos del formulario */
+    gap: 15px;
 }
 
 .pasarela input[type="text"] {
@@ -189,17 +192,129 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .pasarela button:hover {
     background-color: #388E3C;
+    transform: scale(1.03);
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     background-color: #4CAF50;
     color: white;
     padding: 15px;
     margin-top: 20px;
+}
+
+/* SECCIÓN APOYO A AGRICULTORES */
+.apoyo-agricultores {
+    background-color: #e8f5e9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.apoyo-agricultores .contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.apoyo-agricultores h2 {
+    color: #2e7d32;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.testimonios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonios blockquote {
+    font-style: italic;
+    font-size: 18px;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #4CAF50;
+    border-radius: 10px;
+    max-width: 280px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+@media (max-width: 1024px) {
+    .productos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .destacados h2,
+    .pasarela h2,
+    .apoyo-agricultores h2,
+    .testimonios h2 {
+        font-size: 24px;
+    }
+
+    .productos,
+    .testimonios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto,
+    .testimonio {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .pasarela {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 8px 16px;
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .hero p,
+    .producto p,
+    .pasarela p {
+        font-size: 14px;
+    }
+
+    .hero h2,
+    .subtitulo-hero {
+        font-size: 18px;
+    }
 }

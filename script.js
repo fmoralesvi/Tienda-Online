@@ -71,3 +71,26 @@ function actualizarCarrito() {
     if (totalProductosElemento) totalProductosElemento.textContent = totalProductos;
     if (totalPagarElemento) totalPagarElemento.textContent = "$" + totalPagar.toLocaleString("es-CO");
 }
+
+/* ✅ Mostrar mensaje y cambiar color del botón al enviar el formulario */
+document.addEventListener("DOMContentLoaded", function () {
+    const formularioContacto = document.getElementById("contacto-form");
+    const mensajeExito = document.getElementById("mensaje-enviado");
+    const botonEnviar = formularioContacto?.querySelector("button[type='submit']");
+
+    if (formularioContacto && mensajeExito && botonEnviar) {
+        formularioContacto.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            mensajeExito.style.display = "block";
+            botonEnviar.classList.add("enviado"); // ✅ cambia color del botón
+
+            formularioContacto.reset();
+
+            setTimeout(() => {
+                mensajeExito.style.display = "none";
+                botonEnviar.classList.remove("enviado"); // ✅ vuelve al color original
+            }, 4000);
+        });
+    }
+});

@@ -24,7 +24,7 @@
         <h2>¡Contáctanos!</h2>
         <p>Si tienes alguna pregunta, sugerencia o comentario, completa el siguiente formulario y te responderemos lo antes posible.</p>
         
-        <form action="#" method="POST">
+        <form id="contacto-form" action="#" method="POST">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -37,6 +37,11 @@
             <button type="submit">Enviar</button>
         </form>
 
+        <!-- Mensaje de éxito -->
+        <div id="mensaje-enviado" style="display: none; color: green; margin-top: 10px;">
+            ¡Formulario enviado con éxito!
+        </div>
+
         <p>Sigue nuestras redes sociales:</p>
         <div class="social-buttons">
             <a href="https://www.facebook.com/ferneymoralesv" target="_blank" class="social-button facebook"></a>
@@ -44,5 +49,18 @@
             <a href="https://www.tiktok.com/@ferneymoralesv" target="_blank" class="social-button tiktok"></a>
         </div>
     </section>
+
+    <!-- Script para mostrar mensaje -->
+    <script>
+        document.getElementById('contacto-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('mensaje-enviado').style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('mensaje-enviado').style.display = 'none';
+            }, 4000);
+        });
+    </script>
 </body>
 </html>
+
